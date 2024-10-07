@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">OUR SCHEDULE</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let event of schedule" button="true" (click)="toScheduleDetail(event.id)">
+      <div class="schedule-date">
+        <h3>{{getDay(event.date)}}</h3>
+        <p>{{getMonth(event.date)}}</p>
+      </div>
+
+      <ion-label class="schedule-content">
+        <h2>{{event.event}}</h2>
+        <p>{{event.game}} - {{event.team}}</p>
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

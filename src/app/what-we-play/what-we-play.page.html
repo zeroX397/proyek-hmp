@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">WHAT WE PLAY</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let game of games">
+      <img [src]="game.image" alt="{{game.name}}" />
+      <ion-card-header>
+        <ion-card-title>{{game.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{game.description}}</p>
+        <ion-button fill="outline" (click)="toAchievementDetail(game.id)">Achievements</ion-button>
+        <ion-button fill="outline" (click)="toTeam(game.id)">Teams</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

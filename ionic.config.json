@@ -1,0 +1,7 @@
+{
+  "name": "ProjectHMP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

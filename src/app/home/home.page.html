@@ -1,0 +1,46 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button auto-hide="false" color="light"></ion-menu-button>
+  </ion-buttons>
+  <ion-title class="ion-text-center">HOME</ion-title>
+  <ion-buttons slot="end">
+    <ion-button color="light">
+      <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <div id="container">
+    <strong>Welcome to E-Sport</strong>
+    <p>Start Your Journey</p>
+    <ion-grid>
+      <ion-row class="ion-justify-content-center ion-padding">
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-button expand="block" shape="round" size="large" routerLink="/what-we-play">
+            <ion-icon slot="start" name="game-controller-sharp"></ion-icon>
+            What We Play
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center ion-padding">
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-button expand="block" shape="round" size="large" routerLink="/who-we-are">
+            <ion-icon slot="start" name="people-sharp"></ion-icon>
+            Who We Are
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center ion-padding">
+        <ion-col size="12" size-md="6" size-lg="4">
+          <ion-button expand="block" shape="round" size="large" routerLink="/our-schedule">
+            <ion-icon slot="start" name="calendar-sharp"></ion-icon>
+            Our Schedule
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
