@@ -24,8 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./our-schedule/our-schedule.module').then( m => m.OurSchedulePageModule)
   },
   {
-    path: 'achievement-detail/:id',
-    loadChildren: () => import('./what-we-play/achievement-detail/achievement-detail.module').then( m => m.AchievementDetailPageModule)
+    path: 'achievement/:id',
+    loadChildren: () => import('./achievement/achievement.module').then( m => m.AchievementPageModule)
   },
   {
     path: 'team/:id',
@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'schedule-detail/:id',
     loadChildren: () => import('./our-schedule/schedule-detail/schedule-detail.module').then( m => m.ScheduleDetailPageModule)
+  },
+  {
+    path: 'team-member/:id',
+    loadChildren: () => import('./what-we-play/team/team-member/team-member.module').then( m => m.TeamMemberPageModule)
   },
 ];
 

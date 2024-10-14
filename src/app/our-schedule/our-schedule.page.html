@@ -14,14 +14,14 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let event of schedule" button="true" (click)="toScheduleDetail(event.id)">
+    <ion-item *ngFor="let event of schedules" button="true" (click)="toScheduleDetail(event.id)">
       <div class="schedule-date">
         <h3>{{getDay(event.date)}}</h3>
         <p>{{getMonth(event.date)}}</p>
       </div>
 
       <ion-label class="schedule-content">
-        <h2>{{event.event}}</h2>
+        <h2>{{event.title}}</h2>
         <p>{{event.game}} - {{event.team}}</p>
       </ion-label>
 

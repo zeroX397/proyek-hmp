@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/what-we-play"></ion-back-button>
+      <ion-back-button defaultHref="/team"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">TEAMS</ion-title>
+    <ion-title class="ion-text-center">TEAM MEMBERS</ion-title>
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -18,9 +18,13 @@
   </ion-card>
 
   <ion-list>
-    <ion-item *ngFor="let team of teams" (click)="toTeamMembers(team.id)">
+    <ion-item *ngFor="let member of members">
+      <ion-avatar slot="start">
+        <img [src]="member.avatar" />
+      </ion-avatar>
       <ion-label>
-        <h2>{{team.name}}</h2>
+        <h2>{{member.nickname}}</h2>
+        <p>Role: {{member.role}}</p>
       </ion-label>
     </ion-item>
   </ion-list>
