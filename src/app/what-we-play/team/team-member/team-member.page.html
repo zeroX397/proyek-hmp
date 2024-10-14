@@ -23,7 +23,7 @@
   <ion-list>
     <ion-item *ngFor="let member of members">
       <ion-avatar slot="start">
-        <img [src]="member.avatar" />
+        <img id="avatar" [src]="member.avatar" />
       </ion-avatar>
       <ion-label>
         <h2>{{member.nickname}}</h2>
